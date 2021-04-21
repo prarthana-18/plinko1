@@ -8,6 +8,7 @@ var plinkos =[];
 var divisions=[];
 var divisionHeight=[];
 var score=0;
+
 function setup() {
   createCanvas(800,400);
 engine = Engine.create();
@@ -16,7 +17,7 @@ ground=new Ground(width/2,height,width,20);
 
 
 for (var i=0;i<=width;i=i+80){
-  divisions.push(new Divisions(i,height-divisionHeight/2,10,divisionHeight))
+  divisions.push(new Divisions(i,height-divisionHeight/2,10,200))
 }
 
 
@@ -54,7 +55,7 @@ for(var j =50; j<=width-10;j=j+50)
 function draw() {
   background("black");
   textSize  (20);
-  //text("Score :"+score,20,30);
+  text("Score :"+score,20,30);
   Engine.update(engine);
   ground.display();
 
